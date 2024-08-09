@@ -16,11 +16,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
 // Routes
-app.use('/', require('./routes/auth'));
-app.use('/', require('./routes/profile'));
-app.use('/', require('./routes/category'));
-app.use('/', require('./routes/blog'));
-app.use('/admin', require('./routes/admin'));
+app.use('/apiv1/', require('./routes/auth'));
+app.use('/apiv1/', require('./routes/profile'));
+app.use('/apiv1/', require('./routes/category'));
+app.use('/apiv1/', require('./routes/blog'));
+app.use('/apiv1/admin', require('./routes/admin'));
 
 app.use(errHandler)
 
