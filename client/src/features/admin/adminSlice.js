@@ -12,7 +12,7 @@ const initialState = {
 }
 
 // Get All Users list 
-export const getAllUsers = createAsyncThunk('/admin/getAllUsers', async (_, thunkAPI) => {
+export const getAllUsers = createAsyncThunk('admin/getAllUsers', async (_, thunkAPI) => {
     try {
         const token = thunkAPI.getState().auth?.user?.token;
         return await adminService.getAllUsers(token);
@@ -23,7 +23,7 @@ export const getAllUsers = createAsyncThunk('/admin/getAllUsers', async (_, thun
 })
 
 // Toggle User Role
-export const toggleUserRole = createAsyncThunk('/admin/toggleRole', async (data, thunkAPI) => {
+export const toggleUserRole = createAsyncThunk('admin/toggleRole', async (data, thunkAPI) => {
     try {
         const token = thunkAPI.getState().auth?.user?.token;
         return await adminService.toggleRole(token, data);
@@ -34,7 +34,7 @@ export const toggleUserRole = createAsyncThunk('/admin/toggleRole', async (data,
 })
 
 // Toggle User Block
-export const toggleUserBlock = createAsyncThunk('/admin/toggleBlock', async (data, thunkAPI) => {
+export const toggleUserBlock = createAsyncThunk('admin/toggleBlock', async (data, thunkAPI) => {
     try {
         const token = thunkAPI.getState().auth?.user?.token;
         return await adminService.toggleBlock(token, data);
@@ -45,7 +45,7 @@ export const toggleUserBlock = createAsyncThunk('/admin/toggleBlock', async (dat
 })
 
 // Get user all details by userid 
-export const getUserDetails = createAsyncThunk('/admin/getUserDetails', async (data, thunkAPI) => {
+export const getUserDetails = createAsyncThunk('admin/getUserDetails', async (data, thunkAPI) => {
     try {
         const token = thunkAPI.getState().auth?.user?.token;
         return await adminService.getUserDetails(token, data);
